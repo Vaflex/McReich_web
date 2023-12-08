@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Forum</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Forum</h1>
+  </header>
+  
+  <main>
+    <section class="forum-posts">
+      <!-- Forum posts will be displayed here -->
+    </section>
 
+    <section class="create-post">
+      <h2>Create a New Post</h2>
+      <form id="post-form">
+        <input type="text" id="post-title" placeholder="Title" required>
+        <textarea id="post-content" placeholder="Write your post here..." required></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="forumjs.js"></script>
+</body>
+</html>
