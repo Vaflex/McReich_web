@@ -6,13 +6,16 @@ function displayPosts() {
   const forumPosts = document.querySelector('.forum-posts');
   forumPosts.innerHTML = '';
 
-  posts.forEach((post, index) => {
+  // Reverse the order of posts array to display most recent posts first
+  const reversedPosts = [...posts].reverse();
+
+  reversedPosts.forEach((post, index) => {
     const postElement = document.createElement('div');
     postElement.classList.add('post');
     postElement.innerHTML = `
       <h3>${post.title}</h3>
       <p>${post.content}</p>
-      <button onclick="deletePost(${index})">Delete</button>
+      <button onclick="deletePost(${posts.length - index - 1})">Delete</button>
     `;
     forumPosts.appendChild(postElement);
   });
