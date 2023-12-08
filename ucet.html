@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uživatelský účet</title>
+    <style>
+        /* ... (stejný styl) */
+    </style>
+</head>
+<body>
+
+    <h2>Uživatelský účet</h2>
+
+    <!-- Přidáme input pro zadání speciálního ID (e-mailu) -->
+    <label for="userID">Zadejte své ID (E-mail):</label>
+    <input type="email" id="userID" required>
+    <button onclick="showUserData()">Zobrazit údaje</button>
+
+    <!-- Div pro zobrazení údajů -->
+    <div id="userData"></div>
+
+    <script>
+        function showUserData() {
+            var userID = document.getElementById('userID').value;
+
+            // Získání uložených hodnot ze localStorage podle zadaného e-mailu
+            var name = localStorage.getItem('name-' + userID) || 'N/A';
+            var inGameName = localStorage.getItem('inGameName-' + userID) || 'N/A';
+            var email = localStorage.getItem('email-' + userID) || 'N/A';
+
+            // Zobrazení údajů
+            var userDataDiv = document.getElementById('userData');
+            userDataDiv.innerHTML = 'Jméno: ' + name + '<br>In-Game Name: ' + inGameName + '<br>Email: ' + email;
+        }
+    </script>
+
+</body>
+</html>
+
+
