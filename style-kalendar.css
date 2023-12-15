@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#calendarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjust the width as needed */
+}
+
+.monthBox {
+    background-color: #add8e6; /* Light blue color for the month box */
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%; /* Connect the month box with the calendar */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%; /* Adjust the width as needed */
+    margin-top: 20px; /* Add margin to the top */
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.today {
+    background-color: #68e4e4; /* Highlight color for today's date */
+}
+
+.today:hover::after{
+    content: "Dnešní den";
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1;
+}
+.SnemDay {
+    background-color: #4dd13f; /* Highlight color for the first day of the month */
+}
+
+.SnemDay:hover::after {
+    content: "Říšský sněm";
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1;
+}
+.missed {
+    background-color: #828282
+}
+.missed:hover::after {
+    content: "Missed";
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1;
+}
