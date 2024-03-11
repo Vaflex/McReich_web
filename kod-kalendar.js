@@ -56,7 +56,8 @@ setInterval(generateCalendar, 1000);
   // JavaScript list (array) of strings
   let stringList = ['Kdyz nevíš, víš vše', 'Ráno moudřejší večera', 'Dobrá rada, polní tráva',
    'Lepší než skočit pod vlak sníst rajčatový protlak', 'Jestli pes neštěká, chce čaj','Nauč se z vlastních chyb, nechceš skončit jako bezďák'
-,'Dej muži rybu a nakrmiš ho na den, nauč ho rybařit a nakrmíš ho na zbytek života'];
+,'Dej muži rybu a nakrmiš ho na den, nauč ho rybařit a nakrmíš ho na zbytek života','Studuj mladíku','Nic není dokonalé, jenom vaše budoucí tchýně',
+'Lepší trpaslík v hrsti než gorlock na střeše'];
 
   function displayRandomString() {
     // Check if a string was already set today
