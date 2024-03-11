@@ -31,7 +31,7 @@ function generateCalendar() {
                 if (dayCount === currentDay && i === Math.floor((currentDay + firstDay - 1) / 7)) {
                     cell.classList.add("today");
                 }
-                if (dayCount === 13 || dayCount === 25 || dayCount === 2) {
+                if (dayCount === 11 || dayCount === 25 || dayCount === 6) {
                     cell.classList.add("SnemDay");
                     if (dayCount < currentDay) {
                         cell.classList.add("missed");
